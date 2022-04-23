@@ -2,6 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
+use App\Http\Controllers\testContoller;
+
+
+
+//test controller
+route::get("/testController" ,[testContoller::class,'test'] );
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,12 +27,21 @@ use Illuminate\Support\Facades\Route;
 
 
 
-//hello world
-Route::get('/Hello', function () {
+// hello world
+Route::get('/', function () {
     return 'hellow World';
 });
-//hello world
-Route::get('/Bonjour', function () {
-    return view('welcome');
+
+
+// test viewer
+Route::get('/view', function () {
+
+    $text = 'test viewer';
+    return view("pages/testView",compact('text'));
 });
 
+
+
+
+//test controller
+route::get("/testController" ,[testContoller::class,'test'] );
