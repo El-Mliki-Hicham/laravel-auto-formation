@@ -9,8 +9,8 @@
 <body>
 
 
-<h1>{{$title}}</h1>
+{{-- <h1>{{$title}}</h1> --}}
 
-<h2> {{$text}} </h2>
+<h2> {{$personId}} </h2>
 </body>
 </html>

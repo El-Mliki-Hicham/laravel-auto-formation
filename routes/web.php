@@ -1,11 +1,11 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 
 
 use App\Http\Controllers\testContoller;
-
 
 
 //test controller
@@ -34,9 +34,8 @@ Route::get('/', function () {
 
 
 // test viewer
-Route::get('/view', function () {
-
-    $text = 'test viewer';
+Route::get('/testView', function () {
+    $text = 'test views';
     return view("pages/testView",compact('text'));
 });
 
@@ -44,4 +43,10 @@ Route::get('/view', function () {
 
 
 //test controller
-route::get("/testController" ,[testContoller::class,'test'] );
+// route::get("/testControlle" ,[testContoller::class,'test'] );
+route::get('/test/{id}' ,[testContoller::class,'view'] );
+
+
+
+//View avec id
+
