@@ -1,16 +1,11 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
 
 
 
 use App\Http\Controllers\testContoller;
-
-
-//test controller
-route::get("/testController" ,[testContoller::class,'test'] );
-
+use App\Http\Controllers\controllerId;
 
 
 /*
@@ -25,6 +20,11 @@ route::get("/testController" ,[testContoller::class,'test'] );
 */
 
 
+
+//test controller
+route::get("/testController" ,[testContoller::class,'test'] );
+
+    
 
 
 // hello world
@@ -41,12 +41,14 @@ Route::get('/testView', function () {
 
 
 
-
 //test controller
-// route::get("/testControlle" ,[testContoller::class,'test'] );
-route::get('/test/{id}' ,[testContoller::class,'view'] );
-
+route::get('/testControlle' ,[testContoller::class,'test']);
 
 
 //View avec id
+route::get('/person/{id}' ,[controllerId::class,'view'] );
+
+
+
+
 

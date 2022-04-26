@@ -13,15 +13,6 @@ class testContoller extends Controller
     return view("pages/testController", compact("text","title"));
 }
 
-public function view($id){
-
-    $person = [
-        1 => 'hicham ',
-        2 => "nada ",
-    ];
-$personId = $person[$id];
-return view('pages/testController',compact("personId"));
-}
 
 }
 ?>
