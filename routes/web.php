@@ -10,7 +10,7 @@ use App\Http\Controllers\controllerId;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+|Web Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -24,7 +24,7 @@ use App\Http\Controllers\controllerId;
 //test controller
 route::get("/testController" ,[testContoller::class,'test'] );
 
-    
+
 
 
 // hello world
@@ -36,7 +36,7 @@ Route::get('/', function () {
 // test viewer
 Route::get('/testView', function () {
     $text = 'test views';
-    return view("pages/testView",compact('text'));
+    return view("test/testView",compact('text'));
 });
 
 

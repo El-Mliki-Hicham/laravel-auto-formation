@@ -13,7 +13,7 @@ class controllerId extends Controller
             2 => "amine ",
         ];
     $personId = $person[$id];
-    return view('pages/controllerId',compact("personId"));
+    return view('test/controllerId',compact("personId"));
     }
     
 }
