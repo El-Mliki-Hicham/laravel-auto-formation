@@ -10,7 +10,9 @@ class controllerId extends Controller
 
         $person = [
             1 => 'hicham ',
-            2 => "amine ",
+            2 => "yousra ",
+            3=> "chaimae",
+            "nada"=>"20 ans",
         ];
     $personId = $person[$id];
     return view('test/controllerId',compact("personId"));

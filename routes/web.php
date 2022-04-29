@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\testContoller;
 use App\Http\Controllers\controllerId;
-
+use App\Http\Controllers\LaravelTestController;
+use App\Models\laravelTest;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,8 @@ route::get('/testControlle' ,[testContoller::class,'test']);
 route::get('/person/{id}' ,[controllerId::class,'view'] );
 
 
+
+route::get('/person', [LaravelTestController::class,'index']);
 
 
 
