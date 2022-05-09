@@ -51,7 +51,8 @@ route::get('/person/{id}' ,[controllerId::class,'view'] );
 
 
 
-route::get('/person', [LaravelTestController::class,'index']);
+route::get('/person', [controllerId::class,'insert']);
+route::get('/person', [controllerId::class,'show']);
 
 
 
