@@ -51,8 +51,13 @@ route::get('/person/{id}' ,[controllerId::class,'view'] );
 
 
 
-route::get('/person', [controllerId::class,'insert']);
+// route::get('/person', [controllerId::class,'insert']);
 route::get('/person', [controllerId::class,'show']);
+route::post('/crud', [controllerId::class,'add']);
+route::get('/delete/{id}', [controllerId::class,'supprime']);
+route::get('/edit/{id}', [controllerId::class,'afficher_modif']);
+route::get('/editv/{id}', [controllerId::class,'modifierr']);
+// route::get('/person', [controllerId::class,'modifier']);
 
 
 
