@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\laravelTest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class controllerId extends Controller
 {
@@ -103,14 +104,38 @@ public function afficher_modif($id){
 }
 
 
-public function modifierr(Request  $id){
 
-    $person = laravelTest::find($id);
+
+    public function modifierrr(Request $request){
+
+   
+        $id=$request->input("id");
     
-    $person->namee = '';
-    $person->save();
-    }
+        $person =laravelTest::all()->where("id",$id);
+        $person->namee=$request->input("name");
+        $insert =$person->save();
+    
+          
+        if($insert){
+            return back();
+        }
+      
+        
+}
+    public function addd(Request $request){
 
+   
+        $id=$request->input("id");
+    DB::table('laravel_tests')
+
+    ->where('id',$id)
+    ->update(['namee'=>$request->input("name")]);
+
+    return redirect('person');
+
+      
+        
 }
 
 
+}

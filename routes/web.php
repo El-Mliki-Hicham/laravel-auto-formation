@@ -35,10 +35,10 @@ Route::get('/', function () {
 
 
 // test viewer
-Route::get('/testView', function () {
-    $text = 'test views';
-    return view("test/testView",compact('text'));
-});
+    Route::get('/testView', function () {
+        $text = 'test views';
+        return view("test/testView",compact('text'));
+    });
 
 
 
@@ -56,7 +56,8 @@ route::get('/person', [controllerId::class,'show']);
 route::post('/crud', [controllerId::class,'add']);
 route::get('/delete/{id}', [controllerId::class,'supprime']);
 route::get('/edit/{id}', [controllerId::class,'afficher_modif']);
-route::get('/editv/{id}', [controllerId::class,'modifierr']);
+route::post('/editv', [controllerId::class,'addd'])->name("mod");
+
 // route::get('/person', [controllerId::class,'modifier']);
 
 
